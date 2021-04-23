@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+h1, h2, h3 {
+    font-family: 'Comfortaa', cursive;
+}
+p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------------- SLIDES/SCROLL STYLES -----------------------------------------------------------*/
+
+#slide-container {
+    display: flex;
+    flex-direction: row;
+}
+.slide {
+    min-width: 100vw;
+    min-height: 100vh;
+    scroll-snap-align: start;
+}
+#scroll {
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+
+/* ---------------------------------------------------- STYLES FOR HOME SLIDE -----------------------------------------------------------*/
+
+#zeroth {
+    background-color: #051B34;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75vh;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+}
+h1 {
+    color: #ffffff;
+    font-size: 4.2em;
+    text-align: center;
+}
+#direction {
+    color: #ffffff;
+    font-size: 1.3em;
+    text-align: center;
+}
+#zeroth h2 {
+    color: #B0D7F7;
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+}
+#virus {
+    width: 250px;
+    margin: 50px;
+}
+a {
+    display: flex;
+    justify-content: center;
+}
+.pulse {
+    animation-name: pulse;
+    animation-duration: 2s;
+    transform-origin: 70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+/* ---------------------------------------------------- STYLES FOR MASK SLIDE -----------------------------------------------------------*/
+
+#first {
+    background-color: #75B3F2;
+    color: #ffffff;
+    background-image: url(../images/slide-1-bg.png);
+    background-repeat: no-repeat;
+    background-position: 90% bottom;
+}
+#textbox-1 {
+    width: 40%;
+    margin: 120px;
+}
+#first p {
+    margin: 20px 0px;
+    font-size: 1.25em;
+}
+#first h2 {
+    font-size: 2.4em;
+}
+#first h3 {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 500px;
+}
+
+
+/* ---------------------------------------------------- STYLES FOR HANDS SLIDE -----------------------------------------------------------*/
+
+#second {
+    background-color: #004D99;
+    color: #ffffff;
+    background-image: url(../images/slide-2-bg.png);
+    background-repeat: no-repeat;
+    background-position: 110% bottom;
+}
+#textbox-2 {
+    width: 40%;
+    margin: 120px;
+}
+#second p {
+    margin: 20px 0px;
+    font-size: 1.25em;
+}
+#second h2 {
+    font-size: 2.4em;
+}
+#second h3 {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 545px;
+}
+#virus-1 {
+    width: 80px;
+    margin-right: -70px;
+    animation-name: pulse-1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes pulse-1 {
+    0% { transform: scale(1.1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1.1); }
+}
+#virus-2 {
+    width: 110px;
+    margin-bottom: 100px;
+    margin-top: -50px;
+    animation-name: pulse-2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes pulse-2 {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+#virus-3 {
+    width: 60px;
+    margin-bottom: 80px;
+    margin-left: 20px;
+    animation-name: pulse-3;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes pulse-3 {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+#virus-cluster {
+    float: right;
+    margin-right: 370px;
+    transform: translateY(-60px);
+}
+
+
+/* ---------------------------------------------------- STYLES FOR DISTANCING SLIDE -----------------------------------------------------------*/
+
+#third {
+    background-color: #A9DDFB;
+    color: #001B36;
+    background-image: url(../images/slide-3-bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% bottom;
+}
+#textbox-3 {
+    width: 21%;
+    margin: 100px;
+}
+#third p {
+    margin: 20px 0px;
+    font-size: 1.25em;
+}
+#third h2 {
+    font-size: 2.4em;
+}
+#third h3 {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 270px;
+    color: #ffffff;
+}
+
+
+/* ---------------------------------------------------- STYLES FOR VACCINE SLIDE -----------------------------------------------------------*/
+
+#fourth {
+    background-color: #013265;
+    color: #ffffff;
+    background-image: url(../images/slide-4-bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% bottom;
+}
+#textbox-4 {
+    width: 40%;
+    margin: 120px;
+}
+#fourth p {
+    margin: 20px 0px;
+    font-size: 1.25em;
+}
+#fourth h2 {
+    font-size: 2.4em;
+}
+#fourth h3 {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 565px;
+}
