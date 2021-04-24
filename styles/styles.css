@@ -68,7 +68,7 @@ h1 {
     width: 250px;
     margin: 50px;
 }
-a {
+#virus-contain {
     display: flex;
     justify-content: center;
 }
@@ -111,7 +111,7 @@ a {
 #droparea1 {
     height: 132px;
     width: 200px;
-    transform: translate(354px, 195px);
+    transform: translate(356px, 200px);
 }
 #image-1 {
     width: 300px;
@@ -126,6 +126,9 @@ a {
 #drag-contain {
     display: flex;
     justify-content: center;
+}
+#dragtarget1:hover {
+    cursor: pointer;
 }
 #img-drop {
     display: flex;
@@ -155,16 +158,45 @@ a {
 #second {
     background-color: #004D99;
     color: #ffffff;
-    background-image: url(../images/slide-2-bg.png);
-    background-repeat: no-repeat;
-    background-position: 110% bottom;
+}
+#main-contain2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#container-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 #textbox-2 {
-    width: 40%;
-    margin: 120px;
+    width: 74%;
+    margin: 120px 0px 0px 120px;
+    display: flex;
+    flex-direction: column;
+}
+#droparea2 {
+    margin-top: 20%;
+}
+#dragtarget2 {
+    cursor: pointer;
+}
+#image-2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 100em;
+    background-color: #5DA2F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+#drag-contain-2 {
+    display: flex;
+    justify-content: center;
 }
 #second p {
-    margin: 20px 0px;
+    margin: 15px 0px;
     font-size: 1.25em;
 }
 #second h2 {
@@ -173,10 +205,11 @@ a {
 #second h3 {
     text-align: center;
     font-size: 1.3em;
-    margin-top: 545px;
+    margin-top: 2%;
+    color: #A9DDFB;
 }
 #virus-1 {
-    width: 80px;
+    width: 70px;
     margin-right: -70px;
     animation-name: pulse-1;
     animation-duration: 1.5s;
@@ -189,7 +222,7 @@ a {
     100% { transform: scale(1.1); }
 }
 #virus-2 {
-    width: 110px;
+    width: 90px;
     margin-bottom: 100px;
     margin-top: -50px;
     animation-name: pulse-2;
@@ -219,7 +252,7 @@ a {
 #virus-cluster {
     float: right;
     margin-right: 370px;
-    transform: translateY(-60px);
+    transform: translateY(-520px);
 }
 
 
@@ -228,13 +261,42 @@ a {
 #third {
     background-color: #A9DDFB;
     color: #001B36;
-    background-image: url(../images/slide-3-bg.png);
-    background-repeat: no-repeat;
-    background-position: 100% bottom;
+}
+#main-contain3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80vh;
+}
+#container-3 {
+    display: flex;
+    flex-direction: row;
+    width: 69.5vw;
+}
+#droparea3 {
+    height: 717px;
+    width: 200px;
+    margin-top: 13%;
+    margin-left: 11%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+}
+#dragtarget3 {
+    cursor: pointer;
+}
+#people {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 5%;
+    margin-top: 8.5%;
+    width: 30.5vw;
+    z-index: 2;
 }
 #textbox-3 {
-    width: 21%;
-    margin: 100px;
+    width: 35%;
+    margin: 100px 0px 0px 100px;
 }
 #third p {
     margin: 20px 0px;
@@ -246,8 +308,8 @@ a {
 #third h3 {
     text-align: center;
     font-size: 1.3em;
-    margin-top: 270px;
-    color: #ffffff;
+    margin-top: 2%;
+    color: #5DA2F4;
 }
 
 
@@ -256,16 +318,57 @@ a {
 #fourth {
     background-color: #013265;
     color: #ffffff;
-    background-image: url(../images/slide-4-bg.png);
-    background-repeat: no-repeat;
-    background-position: 100% bottom;
+}
+#main-contain4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#container-4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 #textbox-4 {
-    width: 40%;
-    margin: 120px;
+    width: 70%;
+    margin: 120px 0px 0px 120px;
+    display: flex;
+    flex-direction: column;
+}
+#droparea4 {
+    height: 100px;
+    width: 250px;
+    transform: translate(50px, 620%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#image-4 {
+    width: 300px;
+    height: 300px;
+    border-radius: 100em;
+    background-color: #0080FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+#drag-contain-4 {
+    display: flex;
+    justify-content: center;
+}
+#dragtarget4:hover {
+    cursor: pointer;
+}
+#img-drop4 {
+    display: flex;
+    justify-content: left;
+}
+#vacciner {
+    margin-top: 58px;
 }
 #fourth p {
-    margin: 20px 0px;
+    margin: 15px 0px;
     font-size: 1.25em;
 }
 #fourth h2 {
@@ -273,6 +376,7 @@ a {
 }
 #fourth h3 {
     text-align: center;
-    font-size: 1.3em;
-    margin-top: 565px;
+    font-size: 1.35em;
+    margin-top: 2%;
+    color: #A9DDFB;
 }

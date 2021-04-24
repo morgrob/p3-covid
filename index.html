@@ -21,7 +21,7 @@
                         <div id="section-1">
                             <h1>Staying Safe in a Pandemic</h1>
                             <h2>An Interactive Guide to Living During COVID-19</h2>
-                            <a href="#first"><img id="virus" class="pulse" src="./images/virus.png" alt="Coronavirus"></a>
+                            <div id="virus-contain"><a href="#first"><img id="virus" class="pulse" src="./images/virus.png" alt="Coronavirus"></a></div>
                         </div>
                         <div id="direction"><h3>Click the virus to begin!</h3></div>
                     </div>
@@ -42,7 +42,7 @@
                                     not yet showing symptoms (pre-symptomatic) can still spread the virus to other people. Wearing 
                                     a mask helps protect those around you, in case you are infected but not showing symptoms.
                                 </p>
-                                <div id="direction-1"><h3>Put the mask on the girl to continue!</h3></div>
+                                <h3>Put the mask where it belongs to continue!</h3>
                             </div> 
                             <div id="drag-contain"><div id="image-1"><img draggable="true" id="dragtarget1" src="./images/Mask.png" alt="Mask"></div></div>
                         </div>
@@ -54,61 +54,92 @@
                 </div>
                 
                 <div class="slide" id="second">
-                    <div id="textbox-2">
-                        <h2>Wash Your Hands Often!</h2>
-                        <p>
-                            Washing your hands is easy, and it’s one of the most effective ways to prevent the spread of 
-                            germs. Clean hands can stop germs from spreading from one person to another and throughout an 
-                            entire community—from your home and workplace to childcare facilities and hospitals.
-                        </p>
-                        <p>
-                            Washing hands with soap and water is the best way to get rid of germs in most situations. If soap 
-                            and water are not readily available, you can use an alcohol-based hand sanitizer that contains at 
-                            least 60% alcohol.
-                        </p>
+                    <div id="main-contain2">
+                        <div id="container-2">
+                            <div id="textbox-2">
+                                <h2>Wash Your Hands Often!</h2>
+                                <p>
+                                    Washing your hands is easy, and it’s one of the most effective ways to prevent the spread of 
+                                    germs. Clean hands can stop germs from spreading from one person to another and throughout an 
+                                    entire community—from your home and workplace to childcare facilities and hospitals.
+                                </p>
+                                <p>
+                                    Washing hands with soap and water is the best way to get rid of germs in most situations. If soap 
+                                    and water are not readily available, you can use an alcohol-based hand sanitizer that contains at 
+                                    least 60% alcohol.
+                                </p>
+                                <h3>Sanitize the hands to continue!</h3>
+                            </div>
+                            <div id="drag-contain-2"><div id="image-2"><img draggable="true" id="dragtarget2" src="./images/sanitizer.png" alt="Hand Sanitizer"></div></div>
+                        </div>
+                        <div id="img-drop1">
+                            <div id="droparea2" ondrop="location.href='#third'">
+                            <div id="hand-imgs">
+                                <div id="hands"><img src="./images/hands.png" alt="Hands"></div>
+                                <div id="virus-cluster">
+                                    <img id="virus-1" src="./images/virus.png" alt="COVID-19 Virus">
+                                    <img id="virus-2" src="./images/virus.png" alt="COVID-19 Virus">
+                                    <img id="virus-3" src="./images/virus.png" alt="COVID-19 Virus">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="virus-cluster">
-                        <img id="virus-1" src="./images/virus.png" alt="COVID-19 Virus">
-                        <img id="virus-2" src="./images/virus.png" alt="COVID-19 Virus">
-                        <img id="virus-3" src="./images/virus.png" alt="COVID-19 Virus">
-                    </div>
-                    <h3>Sanitize the hands to continue!</h3>
                 </div>
 
                 <div class="slide" id="third">
-                    <div id="textbox-3">
-                        <h2>Practice Social Distancing!</h2>
-                        <p>
-                            COVID-19 spreads mainly among people who are in close contact (within about 6 feet) for a prolonged 
-                            period. Spread happens when an infected person coughs, sneezes, or talks, and droplets from their 
-                            mouth or nose are launched into the air and land in the mouths or noses of people nearby. The droplets 
-                            can also be inhaled into the lungs.
-                        </p>
-                        <p>
-                            Recent studies indicate that people who are infected but do not have symptoms likely also play a role 
-                            in the spread of COVID-19. Since people can spread the virus before they know they are sick, it is 
-                            important to stay at least 6 feet away from others when possible, even if you—or they—do not have any 
-                            symptoms.
-                        </p>
+                    <div id="main-contain3">
+                        <div id="container-3">
+                            <div id="textbox-3">
+                                <h2>Practice Social Distancing!</h2>
+                                <p>
+                                    COVID-19 spreads mainly among people who are in close contact (within about 6 feet) for a prolonged 
+                                    period. Spread happens when an infected person coughs, sneezes, or talks, and droplets from their 
+                                    mouth or nose are launched into the air and land in the mouths or noses of people nearby. The droplets 
+                                    can also be inhaled into the lungs.
+                                </p>
+                                <p>
+                                    Recent studies indicate that people who are infected but do not have symptoms likely also play a role 
+                                    in the spread of COVID-19. Since people can spread the virus before they know they are sick, it is 
+                                    important to stay at least 6 feet away from others when possible, even if you—or they—do not have any 
+                                    symptoms.
+                                </p>
+                                <h3>One of the girls is misplaced. Move her to the correct spot to continue!</h3>
+                            </div>
+                            <div id="droparea3" ondrop="location.href='#fourth'"></div>
+                        </div>
+                        <div id="people">
+                            <div id="drag-contain-3"><img draggable="true" id="dragtarget3" src="./images/distance-1.png" alt="Illustration of a person"></div>
+                            <div id="still-person"><img src="./images/distance-2.png" alt="Illustration of another person"></div>
+                        </div>
                     </div>
-                    <h3>One of the girls is misplaced. Move her to the correct spot to continue!</h3>
+                    <img id="floor" src="./images/slide-3-bg.png" alt="Floor with distance markers">
                 </div>
 
                 <div class="slide" id="fourth">
-                    <div id="textbox-4">
-                        <h2>Get a COVID-19 Vaccine!</h2>
-                        <p>
-                            Vaccines are the best protection we have against many serious illnesses. They protect us from diseases 
-                            by teaching our immune systems how to fight viruses and infections — without actually getting sick from 
-                            the disease.
-                        </p>
-                        <p>
-                            COVID-19 can have serious and life-threatening complications, which is why it’s important for everyone 
-                            who’s eligible to get vaccinated. If you’re not sure, ask your doctor if you should be immunized against 
-                            COVID-19.
-                        </p>
+                    <div id="main-contain4">
+                        <div id="container-4">
+                            <div id="textbox-4">
+                                <h2>Get a COVID-19 Vaccine!</h2>
+                                <p>
+                                    Vaccines are the best protection we have against many serious illnesses. They protect us from diseases 
+                                    by teaching our immune systems how to fight viruses and infections — without actually getting sick from 
+                                    the disease.
+                                </p>
+                                <p>
+                                    COVID-19 can have serious and life-threatening complications, which is why it’s important for everyone 
+                                    who’s eligible to get vaccinated. If you’re not sure, ask your doctor if you should be immunized against 
+                                    COVID-19.
+                                </p>
+                                <h3>Use the syringe to vaccinate the girl to continue!</h3>
+                                <div id="drag-contain-4"><div id="image-4"><img draggable="true" id="dragtarget4" src="./images/syringe.png" alt="Syringe"></div></div>
+                            </div>
+                        </div>
+                        <div id="img-drop4">
+                            <div id="droparea4" ondrop="location.href='#fifth'"></div>
+                            <div id="vacciner"><img id="arm" src="./images/vaccine-arm.png" alt="Arm to be vaccinated"></div>
+                        </div>
                     </div>
-                    <h3>Use the syringe to vaccinate the girl to continue!</h3>
                 </div>
 
                 <div class="slide" id="fifth">
