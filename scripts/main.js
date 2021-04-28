@@ -27,7 +27,7 @@ drop1.addEventListener("drop", function(event) {
 });
 
 document.getElementById("droparea1").ondrop = function() {
-    location.href= "#second";
+    setTimeout(() => { location.href = "#second" }, 250)
 };
 
 
@@ -62,8 +62,9 @@ drop2.addEventListener("drop", function(event) {
 });
 
 document.getElementById("droparea2").ondrop = function() {
-    location.href= "#third";
     document.getElementById("virus-cluster").style.display = 'none';
+    setTimeout(() => { location.href = "#third" }, 250)
+    // location.href= "#third";
 };
 
 
@@ -97,7 +98,7 @@ drop3.addEventListener("drop", function(event) {
 });
 
 document.getElementById("droparea3").ondrop = function() {
-    location.href= "#fourth";
+    setTimeout(() => { location.href = "#fourth" }, 250)
 };
 
 
@@ -130,7 +131,7 @@ drop4.addEventListener("drop", function(event) {
 });
 
 document.getElementById("droparea4").ondrop = function() {
-    location.href= "#fifth";
+    setTimeout(() => { location.href = "#fifth" }, 250)
 };
 
 
