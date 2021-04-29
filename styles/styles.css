@@ -216,6 +216,14 @@ h1 {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
+#soap-1 {
+    width: 120px;
+    margin-right: -115px;
+    animation-name: pulse-1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
 @keyframes pulse-1 {
     0% { transform: scale(1.1); }
     50% { transform: scale(0.9); }
@@ -230,15 +238,33 @@ h1 {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
+#soap-2 {
+    width: 140px;
+    margin-bottom: 100px;
+    margin-top: -50px;
+    animation-name: pulse-2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
 @keyframes pulse-2 {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
 #virus-3 {
-    width: 60px;
+    width: 70px;
     margin-bottom: 80px;
     margin-left: 20px;
+    animation-name: pulse-3;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#soap-3 {
+    width: 90px;
+    margin-bottom: 80px;
+    margin-left: 0px;
     animation-name: pulse-3;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
@@ -254,6 +280,12 @@ h1 {
     margin-right: 370px;
     transform: translateY(-520px);
 }
+#soap-cluster {
+    visibility: hidden;
+    float: right;
+    margin-right: 350px;
+    transform: translateY(-560px);
+}
 
 
 /* ---------------------------------------------------- STYLES FOR DISTANCING SLIDE -----------------------------------------------------------*/
@@ -261,6 +293,8 @@ h1 {
 #third {
     background-color: #A9DDFB;
     color: #001B36;
+    display: flex;
+    flex-direction: column;
 }
 #main-contain3 {
     display: flex;
@@ -281,6 +315,17 @@ h1 {
     z-index: 3;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+}
+#spot {
+    height: 60px;
+    margin-top: 52rem;
+    transform: translateX(-218px);
+} 
+#floor {
+    background-color: #013265;
+    width: 100vw;
+    height: 20vh;
 }
 #dragtarget3 {
     cursor: pointer;
@@ -379,4 +424,128 @@ h1 {
     font-size: 1.35em;
     margin-top: 2%;
     color: #A9DDFB;
+}
+
+/* ---------------------------------------------------- STYLES FOR VACCINE SLIDE -----------------------------------------------------------*/
+
+#fifth {
+    background-color: #ffffff;
+    color: #000;
+}
+header {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+#restart, #info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+#info:hover {
+    cursor: pointer;
+}
+#info:hover i {
+    color: #EA39B7;
+}
+i {
+    color: #0080FF;
+    transition: 0.2s ease-in-out;
+}
+a:hover i {
+    color: #EA39B7;
+}
+a p {
+    color: black;
+}
+header p {
+    font-size: 0.6em;
+}
+#main-contain5 {
+    display: flex;
+    flex-direction: row;
+}
+#textbox-5 {
+    width: 50vw;
+    padding: 10px 100px;
+}
+iframe {
+    margin-left: 15px;
+}
+#all-charts {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: baseline;
+}
+#textbox-5 p {
+    margin: 15px 0px;
+    font-size: 1.25em;
+}
+#textbox-5 li {
+    font-size: 1.25em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#fifth h2 {
+    font-size: 2.4em;
+}
+#fifth h3 {
+    font-size: 1.45em;
+    margin-top: 5%;
+}
+#lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#button-container {
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-evenly;
+}
+button {
+    width: 320px;
+    height: 55px;
+    border-radius: 100em;
+    border: none;
+    background-color: #0080FF;
+    color: white;
+    font-size: 1.15em;
+    font-family: 'Comfortaa', cursive;
+    transition: 0.2s ease-in-out;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #EA39B7;
+    transform: scale(1.05);
+}
+#source-content {
+    display: none;
+    padding: 20px;
+    width: 400px;
+    font-size: 1em;
+    background-color: #004D99;
+    border-radius: 10px;
+    float: right;
+    margin: 10px;
+    transform: translateY(-485%);
+}
+#source-content p {
+    margin: 10px;
+    color: white;
+}
+#source-content a {
+    color: #A9DDFB;
+    text-decoration: underline;
+    transition: 0.2s ease-in-out;
+}
+#source-content a:hover {
+    color: white;
 }

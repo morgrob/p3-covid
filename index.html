@@ -10,6 +10,8 @@
         <script src="./scripts/main.js" defer></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
 
     <body>
@@ -68,9 +70,9 @@
                                     and water are not readily available, you can use an alcohol-based hand sanitizer that contains at 
                                     least 60% alcohol.
                                 </p>
-                                <h3>Sanitize the hands to continue!</h3>
+                                <h3>Wash the hands to continue!</h3>
                             </div>
-                            <div id="drag-contain-2"><div id="image-2"><img draggable="true" id="dragtarget2" src="./images/sanitizer.png" alt="Hand Sanitizer"></div></div>
+                            <div id="drag-contain-2"><div id="image-2"><img draggable="true" id="dragtarget2" src="./images/hand-soap.png" alt="Hand Soap"></div></div>
                         </div>
                         <div id="img-drop1">
                             <div id="droparea2" ondrop="location.href='#third'">
@@ -80,6 +82,11 @@
                                     <img id="virus-1" src="./images/virus.png" alt="COVID-19 Virus">
                                     <img id="virus-2" src="./images/virus.png" alt="COVID-19 Virus">
                                     <img id="virus-3" src="./images/virus.png" alt="COVID-19 Virus">
+                                </div>
+                                <div id="soap-cluster">
+                                    <img id="soap-1" src="./images/soap2.png" alt="Soap Bubbles">
+                                    <img id="soap-2" src="./images/soap1.png" alt="Soap Bubbles">
+                                    <img id="soap-3" src="./images/soap3.png" alt="Soap Bubbles">
                                 </div>
                             </div>
                             </div>
@@ -107,13 +114,15 @@
                                 <h3>One of the girls is misplaced. Move her to the correct spot to continue!</h3>
                             </div>
                             <div id="droparea3" ondrop="location.href='#fourth'"></div>
+                            <img id="spot" src="./images/distance-spot.png" alt="6-foot distance marker">
                         </div>
                         <div id="people">
                             <div id="drag-contain-3"><img draggable="true" id="dragtarget3" src="./images/distance-1.png" alt="Illustration of a person"></div>
-                            <div id="still-person"><img src="./images/distance-2.png" alt="Illustration of another person"></div>
+                            <div id="still-person"><img src="./images/distancer.png" alt="Illustration of another person"></div>
                         </div>
+                        
                     </div>
-                    <img id="floor" src="./images/slide-3-bg.png" alt="Floor with distance markers">
+                    <div id="floor"></div>
                 </div>
 
                 <div class="slide" id="fourth">
@@ -143,11 +152,66 @@
                 </div>
 
                 <div class="slide" id="fifth">
-                    <div id="textbox-5">
-                        <h2>Information About COVID-19</h2>
-                        <p>
-                            Here lies data visualization components about COVID-19 that I have not constructed yet.
-                        </p>
+                    <header>
+                        <div id="restart"><a href="./index.html"><i class="fas fa-play-circle fa-2x"></i><p>Restart</p></a></div>
+                        <div id="info"><i class="fas fa-info-circle fa-2x"></i><p>Sources</p></div>
+                    </header>
+                    <div id="main-contain5">
+                        <div id="textbox-5">
+                            <h2>Information About COVID-19</h2>
+                            <h3>What is COVID-19?</h3>
+                            <p>
+                                Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+                            </p>
+                            <p>
+                                Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and 
+                                recover without requiring special treatment.  Older people, and those with underlying medical problems 
+                                like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to 
+                                develop serious illness.
+                            </p>
+                            <h3>How does COVID-19 spread?</h3>
+                            <p>
+                                COVID-19 is thought to spread mainly through close contact from person to person, including between people 
+                                who are physically near each other (within about 6 feet). People who are infected but do not show symptoms 
+                                can also spread the virus to others. Cases of reinfection with COVID-19  have been reported but are rare. 
+                                We are still learning about how the virus spreads and the severity of illness it causes.
+                            </p>
+                            <h3>What are the symptoms of COVID-19?</h3>
+                            <p>Symptoms of COVID-19 include:</p>
+                            <div id="lists">
+                                <ul>
+                                    <li>Cough</li>
+                                    <li>Fever or chills</li>
+                                    <li>Shortness of breath</li>
+                                    <li>Muscle or body aches</li>
+                                </ul>
+                                <ul>
+                                    <li>Sore throat</li>
+                                    <li>Loss of taste/smell</li>
+                                    <li>Headache</li>
+                                    <li>New fatigue</li>
+                                </ul>
+                                <ul>
+                                    <li>Nausea or vomiting</li>
+                                    <li>Diarrhea</li>
+                                    <li>Congenstion/runny nose</li>
+                                </ul>
+                            </div>
+                            <div id="button-container">
+                                <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html"><button id="cdc">Visit CDC.gov</button></a>
+                                <a href="https://www.vaccines.gov/get-vaccinated/where"><button id="near-me">Find a Vaccine Near You</button></a>
+                            </div>
+                        </div>
+                        <div id="all-charts">
+                            <iframe src="https://covid-19.dataflowkit.com/assets/widget/c19-widget-light.html" frameborder="0" scrolling="no" width="85%" height="220"></iframe>                            <div id="curve_chart1" style="width: 45vw; height: 320px"></div>
+                            <div id="curve_chart2" style="width: 45vw; height: 320px"></div>
+                        </div>
+                    </div>
+                    <div id="source-content">
+                        <p>Written Info: <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">CDC Website</a></p>
+                        <p>Chart Data: <a href="https://www.statnews.com/feature/coronavirus/covid-19-tracker/">Stat News</a></p>
+                        <p>COVID Widget: <a href="https://covid-19.dataflowkit.com/">Data Flow Kit</a></p>
+                        <p>Pictures: All made by Morgan Roberts with Adobe Illustrator</p>
                     </div>
                 </div>
             
