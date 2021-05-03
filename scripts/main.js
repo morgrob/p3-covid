@@ -1,4 +1,4 @@
-// ------------------------------------------------ DRAG FUNCTIONS ------------------------------------------------- 
+// ------------------------------------------------ DRAG EVENTS ------------------------------------------------- 
 
 // These establish variables for the item to be dragged (denoted as "draggable='true'" in HTML) and the invisible 
 // designated area where the item is intended to be dropped
