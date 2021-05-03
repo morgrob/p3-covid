@@ -105,7 +105,7 @@ document.getElementById("droparea4").ondrop = function() {
 
 
 
-// ------------------------------------------------ GOOGLE LINE GRAPHS ------------------------------------------------- 
+// ----------------------------------------------- GOOGLE LINE GRAPHS ------------------------------------------------ 
 
 // Creates a new chart using Google Charts.
 google.charts.load('current', {'packages':['corechart']});
