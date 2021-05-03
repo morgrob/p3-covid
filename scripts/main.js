@@ -1,26 +1,39 @@
+// ------------------------------------------------ DRAG FUNCTIONS ------------------------------------------------- 
+
+// These establish variables for the item to be dragged (denoted as "draggable='true'" in HTML) and the invisible 
+// designated area where the item is intended to be dropped
 var drag1 = document.getElementById("dragtarget1");
 var drop1 = document.getElementById("droparea1");
 
+
+// Listens for when the draggable item starts to be dragged and associates its id name with the drag event.
 drag1.addEventListener("dragstart", function(event) {
-  event.dataTransfer.setData("Text", event.target.id);
+  event.dataTransfer.setData("DraggedItemID", event.target.id);
 });
 
+// Prevents the default dragover behavior so that we can implement a specific behavior
 drop1.addEventListener("dragover", function(event) {
   event.preventDefault();
 });
 
+// First, prevents the default drop behavior so that we can use our own.
+// Second, appends the draggable item to the drop area as a child of that area, which makes the draggable item stay where it is placed.
 drop1.addEventListener("drop", function(event) {
   event.preventDefault();
-  var data = event.dataTransfer.getData("Text");
+  var data = event.dataTransfer.getData("DraggedItemID");
   event.target.appendChild(document.getElementById(data));
 });
 
+// This block of code tells the page to move to the next slide when the draggable item is dropped in the designated 
+// drop area.
+// The "setTimeout()" adds a delay to the location change so that the user can view what happens after the drag for 
+// a couple of seconds
 document.getElementById("droparea1").ondrop = function() {
     setTimeout(() => { location.href = "#second" }, 350)
 };
 
 
-
+// Same drag event for the second slide
 var drag2 = document.getElementById("dragtarget2");
 var drop2 = document.getElementById("droparea2");
 
@@ -45,7 +58,7 @@ document.getElementById("droparea2").ondrop = function() {
 };
 
 
-
+// Same drag event for the third slide
 var drag3 = document.getElementById("dragtarget3");
 var drop3 = document.getElementById("droparea3");
 
@@ -68,7 +81,7 @@ document.getElementById("droparea3").ondrop = function() {
 };
 
 
-
+// Same drag event for the fourth slide
 var drag4 = document.getElementById("dragtarget4");
 var drop4 = document.getElementById("droparea4");
 
@@ -91,9 +104,16 @@ document.getElementById("droparea4").ondrop = function() {
 };
 
 
+
+// ------------------------------------------------ GOOGLE LINE GRAPHS ------------------------------------------------- 
+
+// Creates a new chart using Google Charts.
 google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawWorldChart);
 
+    // Defines a variable to hold all of the data that will be in my line graph where the first column are x-axis labels, the second column 
+    // is for the blue line in the graph, and the third is for the red line in the graph. The y-axis labels adjust automatically according to 
+    // the data.
       function drawWorldChart() {
         var data = google.visualization.arrayToDataTable([
           ['Date', 'Total Cases', 'Total Deaths'],
@@ -111,17 +131,22 @@ google.charts.load('current', {'packages':['corechart']});
           ['4/21',  145871034,      3140791]
         ]);
 
+        // Defines another variable to hold all of the graph labels including the main title and where the legend will appear. "curveType: 'function'"
+        // makes the line graph a curved line instead of one with defined turns according to Google Charts.
         var options = {
           title: 'Total Worldwide COVID-19 Cases and Deaths',
           curveType: 'function',
           legend: { position: 'bottom' }
         };
 
+        // Creates a new chart and assigns it to the id "curve_chart1" in my HTML.
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart1'));
 
+        // Executes the chart using the given data and defined options.
         chart.draw(data, options);
       }
 
+// Same method for making the second line graph
 google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawUsaChart);
 
@@ -153,9 +178,15 @@ google.charts.load('current', {'packages':['corechart']});
         chart.draw(data, options);
       }
 
+
+// ------------------------------------------------ SLIDE 5 MODAL DISPLAY ------------------------------------------------- //
+
+// Defines variables that are assigned to the source content to be hidden/shown and the info button that will show or hide said content.
 var modal = document.getElementById("source-content");
 var button = document.getElementById("info");
 
+// Adds an event listener function for when the user performs a click action on the button. The function says that if the modal is showing
+// and the user clicks the button, hide the modal and if the modal is hidden and the user clicks the button again, show the modal.
 button.addEventListener("click", function(event) {
     console.log(modal.style.display)
     if (modal.style.display == "block") {
@@ -164,16 +195,23 @@ button.addEventListener("click", function(event) {
         modal.style.display = "block";
     }
     },
-    false
 );
 
+
+// ------------------------------------------------ SLIDE 5 MODAL INFO ICON SWAP ------------------------------------------------- //
+
+// Function for swapping the icon of the modal button when clicked. 
+// First line of the function establishes a constant of reference type 'icon'
 button.addEventListener('click', function() {
     const icon = this.querySelector('i');
-    const text = this.querySelector('span');
   
+    // If the class name of the icon contains fa-info-circle (the name of the icon from FontAwesome), change it to fa-times-circle when the 
+    // user clicks it. 
     if (icon.classList.contains('fa-info-circle')) {
         icon.classList.remove('fa-info-circle');
         icon.classList.add('fa-times-circle');
+    // If the class name of the icon is not fa-info-circle, remove the current name (which would be fa-times-circle since there are only two 
+    // options) and make it fa-info-circle.
     } else {
         icon.classList.remove('fa-times-circle');
         icon.classList.add('fa-info-circle');
