@@ -92,6 +92,9 @@ h1 {
     background-color: #75B3F2;
     color: #ffffff;
 }
+.alternate {
+    visibility: hidden;
+}
 #main-contain1 {
     display: flex;
     flex-direction: row;
@@ -145,7 +148,7 @@ h1 {
 #first h2 {
     font-size: 2.4em;
 }
-#first h3 {
+.direction, .alternate {
     text-align: center;
     font-size: 1.35em;
     margin-top: 2%;
@@ -317,10 +320,19 @@ h1 {
     justify-content: center;
     align-items: flex-end;
 }
+#spot-container {
+    display: flex;
+    height: 100vh;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: translateX(-220px);
+}
 #spot {
     height: 60px;
-    margin-top: 52rem;
-    transform: translateX(-218px);
+    margin-bottom: 8vh;
+    /* margin-top: 52rem;
+    transform: translateX(-218px); */
 } 
 #floor {
     background-color: #013265;
@@ -426,7 +438,7 @@ h1 {
     color: #A9DDFB;
 }
 
-/* ---------------------------------------------------- STYLES FOR VACCINE SLIDE -----------------------------------------------------------*/
+/* ---------------------------------------------------- STYLES FOR INFO/CHARTS SLIDE -----------------------------------------------------------*/
 
 #fifth {
     background-color: #ffffff;
@@ -528,17 +540,16 @@ button:hover {
 }
 #source-content {
     display: none;
-    padding: 20px;
-    width: 400px;
+    padding: 30px;
     font-size: 1em;
     background-color: #004D99;
     border-radius: 10px;
     float: right;
     margin: 10px;
-    transform: translateY(-485%);
+    transform: translateY(-305%);
 }
 #source-content p {
-    margin: 10px;
+    margin: 15px;
     color: white;
 }
 #source-content a {
@@ -548,4 +559,316 @@ button:hover {
 }
 #source-content a:hover {
     color: white;
+}
+
+/* ------------------------------------------------------- MEDIA QUERIES --------------------------------------------------------------*/
+@media (min-width: 1051px) {
+    #curve_chart1, #curve_chart2 {
+        width: 45vw;
+        height: 30vh;
+    }
+}
+@media (max-width: 1050px) and (min-width: 600px) {
+/* -------------------------- HOME SLIDE -------------------------------*/
+    h1 {
+        font-size: 3em;
+    }
+    #zeroth h2 {
+        font-size: 2em;
+    }
+    #container {
+        margin-top: 30vh;
+        height: 65vh;
+    }
+/* -------------------------- MASK SLIDE -------------------------------*/
+    #main-contain1 {
+        flex-direction: column;
+    }
+    #drag-contain, #img-drop {
+        display: none;
+    }
+    #first {
+        background-image: url("../images/slide1-tablet.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    #textbox-1 {
+        margin-top: 150px;
+        width: 78%;
+    }
+    .alternate {
+        visibility: visible;
+        margin-top: -20px;
+    }
+    .direction {
+        visibility: hidden;
+    }
+/* -------------------------- HANDS SLIDE -------------------------------*/
+    #main-contain2 {
+        flex-direction: column;
+    }
+    #drag-contain-2 {
+        display: none;
+    }
+    #textbox-2 {
+        margin-top: 150px;
+        width: 78%;
+    }
+    #hand-imgs {
+        margin-left: 25%;
+        margin-top: -10%;
+    }
+    #virus-cluster {
+        visibility: hidden;
+    }
+    #soap-cluster {
+        visibility: visible;
+        margin-right: 270px;
+        transform: translateY(-700px);
+    }
+    #second .alternate {
+        margin-top: -20px;
+    }
+/* -------------------------- DISTANCING SLIDE -------------------------------*/
+    #main-contain3, #container-3 {
+        flex-direction: column;
+    }
+    #droparea3, #spot-container, #people, #floor {
+        visibility: hidden;
+    }
+    #textbox-3 {
+        width: 110%;
+        margin: 150px 0px 0px 120px;
+    }
+    #third {
+        background-image: url("../images/slide3-tablet.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+    #third .alternate {
+        margin-top: -20px;
+    }
+/* -------------------------- VACCINE SLIDE -------------------------------*/
+    #main-contain4 {
+        flex-direction: column;
+    }
+    #img-drop4 {
+        visibility: hidden;
+    }
+    #textbox-4 {
+        width: 78%;
+        margin-top: 150px;
+    }
+    #dragtarget4 {
+        width: 300px;
+    }
+    #image-4 {
+        width: 400px;
+        height: 400px;
+    }
+/* -------------------------- INFO SLIDE -------------------------------*/
+    #main-contain5 {
+        flex-direction: column;
+    }
+    #textbox-5 {
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 3%;
+        padding: 0px;
+    }
+    #button-container {
+        margin-top: 4%;
+    }
+    #all-charts {
+        flex-direction: row;
+        margin-left: -20%;
+        margin-top: 5%;
+    }
+    iframe {
+        visibility: hidden;
+    }
+    #source-content {
+        transform: translateY(-385%);
+    }
+}
+
+@media (max-width: 599px) {
+/* -------------------------- HOME SLIDE -------------------------------*/
+    h1 {
+        font-size: 2.7em;
+    }
+    #zeroth h2 {
+        font-size: 1.2em;
+    }
+    #container {
+        margin-top: 20vh;
+        height: 75vh;
+    }
+    #zeroth h3 {
+        font-size: 1em;
+    }
+    #virus {
+        width: 200px;
+    }
+/* -------------------------- MASK SLIDE -------------------------------*/
+    #main-contain1 {
+        flex-direction: column;
+    }
+    #drag-contain, #img-drop {
+        display: none;
+    }
+    #first {
+        background-image: url("../images/slide1-mobile.png");
+        background-repeat: no-repeat;
+        background-position: 50% 26%;
+    }
+    #textbox-1 {
+        margin: 40px 0px 0px 25px;
+        width: 88%;
+    }
+    #textbox-1 h2 {
+        font-size: 2em;
+    }
+    #textbox-1 p {
+        font-size: 1em;
+    }
+    .alternate {
+        visibility: visible;
+        margin-top: -45px;
+        font-size: 1.2em;
+    }
+    .direction {
+        visibility: hidden;
+    }
+/* -------------------------- HANDS SLIDE -------------------------------*/
+    #main-contain2 {
+        flex-direction: column;
+    }
+    #second {
+        background-image: url("../images/hands-mobile.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 25%;
+    }
+    #drag-contain-2 {
+        display: none;
+    }
+    #textbox-2 {
+        margin: 40px 0px 0px 25px;
+        width: 88%;
+    }
+    #textbox-2 h2 {
+        font-size: 2em;
+    }
+    #textbox-2 p {
+        font-size: 1em;
+    }
+    #hand-imgs {
+        visibility: hidden;
+    }
+    #second .alternate {
+        margin-top: -20px;
+        font-size: 1.2em;
+    }
+/* -------------------------- DISTANCING SLIDE -------------------------------*/
+    #main-contain3, #container-3 {
+        flex-direction: column;
+    }
+    #droparea3, #spot-container, #people, #floor {
+        visibility: hidden;
+    }
+    #textbox-3 {
+        width: 125%;
+        margin: 40px 0px 0px 25px;
+    }
+    #textbox-3 h2 {
+        font-size: 2em;
+    }
+    #textbox-3 p {
+        font-size: 1em;
+    }
+    #third {
+        background-image: url("../images/slide3-tablet.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 28%;
+    }
+    #third .alternate {
+        margin-top: -70px;
+        font-size: 1.2em;
+    }
+/* -------------------------- VACCINE SLIDE -------------------------------*/
+    #main-contain4 {
+        flex-direction: column;
+    }
+    #img-drop4 {
+        visibility: hidden;
+    }
+    #textbox-4 {
+        width: 88%;
+        margin: 40px 0px 0px 25px;
+    }
+    #textbox-4 h2 {
+        font-size: 2em;
+    }
+    #textbox-4 p {
+        font-size: 1em;
+    }
+    #dragtarget4 {
+        width: 200px;
+    }
+    #image-4 {
+        width: 300px;
+        height: 300px;
+    }
+    #fourth .alternate {
+        margin-top: -50px;
+        font-size: 1.2em;
+    }
+/* -------------------------- INFO SLIDE -------------------------------*/
+    #main-contain5 {
+        flex-direction: column;
+    }
+    #textbox-5 {
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 1%;
+        padding: 0px;
+    }
+    #button-container {
+        visibility: hidden;
+    }
+    #all-charts {
+        flex-direction: row;
+        margin-left: -42%;
+        margin-top: -27%;
+    }
+    #curve_chart2 {
+        visibility: hidden;
+    }
+    #fifth h2 {
+        font-size: 1.3em;
+    }
+    #fifth h3 {
+        font-size: 0.9em;
+    }
+    #fifth p, #fifth li {
+        font-size: 0.75em;
+    }
+    iframe {
+        visibility: hidden;
+    }
+    #restart p, #info p {
+        font-size: 0.1em;
+    }
+    #fifth li {
+        font-size: 0.7em;
+        margin-left: 15px;
+    }
+    #source-content {
+        transform: translateY(-260%);
+    }
 }

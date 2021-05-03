@@ -44,7 +44,8 @@
                                     not yet showing symptoms (pre-symptomatic) can still spread the virus to other people. Wearing 
                                     a mask helps protect those around you, in case you are infected but not showing symptoms.
                                 </p>
-                                <h3>Put the mask where it belongs to continue!</h3>
+                                <h3 class="direction">Put the mask where it belongs to continue!</h3>
+                                <h3 class="alternate">Swipe left to continue!</h3>
                             </div> 
                             <div id="drag-contain"><div id="image-1"><img draggable="true" id="dragtarget1" src="./images/Mask.png" alt="Mask"></div></div>
                         </div>
@@ -70,7 +71,8 @@
                                     and water are not readily available, you can use an alcohol-based hand sanitizer that contains at 
                                     least 60% alcohol.
                                 </p>
-                                <h3>Wash the hands to continue!</h3>
+                                <h3 class="direction">Wash the hands to continue!</h3>
+                                <h3 class="alternate">Swipe left to continue!</h3>
                             </div>
                             <div id="drag-contain-2"><div id="image-2"><img draggable="true" id="dragtarget2" src="./images/hand-soap.png" alt="Hand Soap"></div></div>
                         </div>
@@ -111,10 +113,11 @@
                                     important to stay at least 6 feet away from others when possible, even if you—or they—do not have any 
                                     symptoms.
                                 </p>
-                                <h3>One of the girls is misplaced. Move her to the correct spot to continue!</h3>
+                                <h3 class="direction">One of the girls is misplaced. Move her to the correct spot to continue!</h3>
+                                <h3 class="alternate">Swipe left to continue!</h3>
                             </div>
                             <div id="droparea3" ondrop="location.href='#fourth'"></div>
-                            <img id="spot" src="./images/distance-spot.png" alt="6-foot distance marker">
+                            <div id="spot-container"><img id="spot" src="./images/distance-spot.png" alt="6-foot distance marker"></div>
                         </div>
                         <div id="people">
                             <div id="drag-contain-3"><img draggable="true" id="dragtarget3" src="./images/distance-1.png" alt="Illustration of a person"></div>
@@ -140,7 +143,8 @@
                                     who’s eligible to get vaccinated. If you’re not sure, ask your doctor if you should be immunized against 
                                     COVID-19.
                                 </p>
-                                <h3>Use the syringe to vaccinate the girl to continue!</h3>
+                                <h3 class="direction">Use the syringe to vaccinate the girl to continue!</h3>
+                                <h3 class="alternate">Swipe left to continue!</h3>
                                 <div id="drag-contain-4"><div id="image-4"><img draggable="true" id="dragtarget4" src="./images/syringe.png" alt="Syringe"></div></div>
                             </div>
                         </div>
@@ -203,15 +207,18 @@
                             </div>
                         </div>
                         <div id="all-charts">
-                            <iframe src="https://covid-19.dataflowkit.com/assets/widget/c19-widget-light.html" frameborder="0" scrolling="no" width="85%" height="220"></iframe>                            <div id="curve_chart1" style="width: 45vw; height: 320px"></div>
-                            <div id="curve_chart2" style="width: 45vw; height: 320px"></div>
+                            <iframe src="https://covid-19.dataflowkit.com/assets/widget/c19-widget-light.html" frameborder="0" scrolling="no" width="85%" height="220"></iframe>                            
+                            <div id="curve_chart1"></div>
+                            <div id="curve_chart2"></div>
                         </div>
                     </div>
                     <div id="source-content">
-                        <p>Written Info: <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">CDC Website</a></p>
-                        <p>Chart Data: <a href="https://www.statnews.com/feature/coronavirus/covid-19-tracker/">Stat News</a></p>
-                        <p>COVID Widget: <a href="https://covid-19.dataflowkit.com/">Data Flow Kit</a></p>
-                        <p>Pictures: All made by Morgan Roberts with Adobe Illustrator</p>
+                        <p><b>Written Info:</b> <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">CDC Website</a></p>
+                        <p><b>Chart Data:</b> <a href="https://www.statnews.com/feature/coronavirus/covid-19-tracker/">Stat News</a></p>
+                        <p><b>JS Chart Code Reference:</b> <a href="https://developers.google.com/chart/interactive/docs/gallery/linechart">Google Charts</a></p>
+                        <p><b>JS ondrop Event Code Reference:</b> <a href="https://www.w3schools.com/jsref/event_ondrop.asp">W3Schools</a></p>
+                        <p><b>COVID Widget:</b> <a href="https://covid-19.dataflowkit.com/">Data Flow Kit</a></p>
+                        <p><b>Pictures:</b> All made by Morgan Roberts with Adobe Illustrator</p>
                     </div>
                 </div>
             
